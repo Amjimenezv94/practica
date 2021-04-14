@@ -1,0 +1,35 @@
+
+    <!DOCTYPE html>
+    <html xmlns="./index.html">
+
+    <head runat="server">
+        <title>Test Form</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            var response = grecaptcha.getResponse();
+
+            if (response.length == 0) { }
+            //reCaptcha not verified
+
+            else { }
+            //reCaptch verified
+            $("#cmdSubmit").click(function () {
+                //need to validate the captcha
+            });
+        </script>
+    </head>
+
+    <body>
+        <form id="form1" runat="server">
+            <label class="clsLabe">First Name<sup>*</sup></label><br />
+            <input type="text" id="txtFName" name="txtFName" class="clsInput" /><br />
+            <div class="g-recaptcha" data-sitekey="my_key"></div>
+            <img id="cmdSubmit" src="SubmitBtn.png" alt="Submit Form" style="cursor:pointer;" />
+        </form>
+    </body>
+
+    </html>
